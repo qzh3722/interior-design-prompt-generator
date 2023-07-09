@@ -141,7 +141,7 @@ function generateRandomPrompt() {
 }
 
 document.getElementById('copy-button').addEventListener('click', function() {
-    var prompt = document.getElementById('generated-prompt').textContent;
+    var prompt = document.getElementById('prompt').textContent;
     navigator.clipboard.writeText(prompt).then(function() {
         console.log('Copying to clipboard was successful!');
     }, function(err) {
