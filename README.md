@@ -1,7 +1,7 @@
 # Interior Design Prompt Generator
 
 ## Overview
-This is an Interior Design Prompt Generator. It produces unique design prompts based on user-selected parameters or randomly. It aims to inspire creativity and provide direction in interior design projects.
+This is an Interior Design Prompt Generator. It produces unique design prompts based on user-selected parameters or randomly. It aims to inspire creativity and provide direction in interior design projects.The generated hints can be used directly in AI image generation tools such as Midjourney, Stable Diffusion, etc.
 
 ## Features
 - User can select specific parameters for the interior design prompt.
