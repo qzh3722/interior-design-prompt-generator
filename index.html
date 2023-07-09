@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interior Design Prompt Generator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Welcome to the Interior Design Prompt Generator!</h1>
+    <p>Choose your preferences and generate a design prompt.</p>
+
+    <form id="design-form">
+        <label for="perspective">Perspective:</label>
+        <select id="perspective">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="space-type">Space Type:</label>
+        <select id="space-type">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="style">Style:</label>
+        <select id="style">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="color-palette">Color Palette:</label>
+        <select id="color-palette">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <!-- Add more select elements for other categories -->
+        <label for="furniture">Furniture:</label>
+        <select id="furniture">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="layout">Layout:</label>
+        <select id="layout">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="lighting">Lighting:</label>
+        <select id="lighting">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="materials">Materials:</label>
+        <select id="materials">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="textures">Textures:</label>
+        <select id="textures">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="accessories">Accessories:</label>
+        <select id="accessories">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        <label for="mood">Mood:</label>
+        <select id="mood">
+            <option value="">--Please choose an option--</option>
+            <!-- Add more options here -->
+        </select>
+
+        
+    </form>
+
+    <button onclick="generatePrompt()">Generate Prompt</button>
+    <button onclick="generateRandomPrompt()">Randomly generated</button>
+<p id="prompt"></p>
+
+<p id="prompt"></p>
+
+</body>
+</html>
