@@ -6,6 +6,10 @@ body {
     margin: 0 auto;
 }
 
+select {
+    width: 200px;
+}
+
 h1 {
     color: #6c757d;
     text-align: center;
