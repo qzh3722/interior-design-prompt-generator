@@ -4,6 +4,26 @@
     <title>Interior Design Prompt Generator</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js" defer></script>
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      
+        .container {
+          display: flex;
+          flex-direction: column;
+        }
+      
+        @media screen and (min-width: 600px) {
+          .container {
+            flex-direction: row;
+          }
+        }
+      
+        .button {
+          margin: 5px;
+        }
+      </style>   
 </head>
 <body>
     <h1>Welcome to the Interior Design Prompt Generator!</h1>
@@ -80,10 +100,12 @@
         
     </form>
 
-    <button onclick="generatePrompt()">Generate Prompt</button>
-    <button onclick="generateRandomPrompt()">Randomly generated</button>
-    <button id="copy-button">Copy to clipboard</button>
-
+    <div class="container">
+        <button class="button" onclick="generatePrompt()">Generate Prompt</button>
+        <button class="button" onclick="generateRandomPrompt()">Randomly generated</button>
+        <button class="button" id="copy-button">Copy to clipboard</button>
+    </div>
+      
 <p id="prompt"></p>
 
 </body>
