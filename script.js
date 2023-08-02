@@ -112,7 +112,7 @@ function generatePrompt() {
     let mood = document.getElementById('mood').value || moods[Math.floor(Math.random() * moods.length)];
 
     // Combine the options into a prompt
-    let prompt = "Create a " + perspective + " perspective image of a " + spaceType + " with " + furniture + " furniture, arranged in a " + layout + " layout. The design should have a " + style + " style with a " + colorPalette + " color palette. The room should be lit with " + lighting + " and incorporate " + material + " materials with a " + texture + " texture. Add some " + accessory + " as accessories to create a " + mood + " mood.";
+    let prompt = [perspective, spaceType, furniture, layout, style, colorPalette, lighting, material + " with a " + texture + " texture", accessory, mood].join(', ');
 
     // Display the prompt
     document.getElementById('prompt').textContent = prompt;
@@ -134,7 +134,7 @@ function generateRandomPrompt() {
     let mood = moods[Math.floor(Math.random() * moods.length)];
 
     // Combine the options into a prompt
-    let prompt = "Create a " + perspective + " perspective image of a " + spaceType + " with " + furniture + " furniture, arranged in a " + layout + " layout. The design should have a " + style + " style with a " + colorPalette + " color palette. The room should be lit with " + lighting + " and incorporate " + material + " materials with a " + texture + " texture. Add some " + accessory + " as accessories to create a " + mood + " mood.";
+    let prompt = [perspective, spaceType, furniture, layout, style, colorPalette, lighting, material + " with a " + texture + " texture", accessory, mood].join(', ');
 
     // Display the prompt
     document.getElementById('prompt').textContent = prompt;
