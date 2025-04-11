@@ -1,93 +1,66 @@
-/* Basic reset */
+/* Resetting default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    line-height: 1.6;
-    background-color: #f4f4f4; /* Light background */
-    color: #333; /* Dark text */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-    background-color: #343a40; /* Dark header background */
-    color: #fff; /* White header text */
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+header h1 {
+  color: #007bff;
 }
 
 nav {
-    background-color: #212529;
-    padding: 0.5rem 0;
+  background-color: #f0f0f0;
+  padding: 0.5rem;
 }
 
 nav ul {
-    list-style: none;
-    text-align: center;
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1rem;
+  margin: 0 1rem;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ddd;
+  color: #007bff;
 }
 
 main {
-    padding: 2rem;
-    flex-grow: 1; /* Allows main to fill available space */
-}
-
-form {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
-
-label, select {
-    margin-bottom: 1rem;
-    display: block;
-}
-
-button {
-    padding: 0.8rem 1.5rem;
-    background-color: #007bff; /* Primary blue button */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
+  padding: 2rem;
+  flex-grow: 1;
+  display: grid;
+  gap: 1rem;
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #343a40;
-    color: #fff;
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
 }
