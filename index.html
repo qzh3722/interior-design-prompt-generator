@@ -6,67 +6,80 @@
     <script src="script.js" defer></script>
     <style>
         body {
-          font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
-      
+
         .container {
-          display: flex;
-          flex-direction: column;
+            display: flex;
+            flex-direction: column;
         }
-      
+
         @media screen and (min-width: 600px) {
-          .container {
-            flex-direction: row;
-          }
+            .container {
+                flex-direction: row;
+            }
         }
-      
+
         .button {
-          margin: 5px;
+            margin: 5px;
         }
-      </style>   
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Interior Design Prompt Generator!</h1>
-    <p>Choose your preferences and generate a design prompt.</p>
+    <header class="header">
+        <nav class="navbar">
+            <h1>Interior Design Prompt Generator</h1>
+        </nav>
+    </header>
+    
+    <main class="main-content">
+        <section class="intro">
+            <p>Choose your preferences and generate a design prompt.</p>
+        </section>
+        <section class="form-section">
+            <form id="design-form">
+                <label for="perspective">Perspective:</label>
+                <select id="perspective">
+                    <option value="">--Please choose an option--</option>
+                    <!-- Add more options here -->
+                </select>
 
-    <form id="design-form">
-        <label for="perspective">Perspective:</label>
-        <select id="perspective">
-            <option value="">--Please choose an option--</option>
-            <!-- Add more options here -->
-        </select>
+                <label for="space-type">Space Type:</label>
+                <select id="space-type">
+                    <option value="">--Please choose an option--</option>
+                    <!-- Add more options here -->
+                </select>
 
-        <label for="space-type">Space Type:</label>
-        <select id="space-type">
-            <option value="">--Please choose an option--</option>
-            <!-- Add more options here -->
-        </select>
+                <label for="style">Style:</label>
+                <select id="style">
+                    <option value="">--Please choose an option--</option>
+                    <!-- Add more options here -->
+                </select>
 
-        <label for="style">Style:</label>
-        <select id="style">
-            <option value="">--Please choose an option--</option>
-            <!-- Add more options here -->
-        </select>
+                <label for="color-palette">Color Palette:</label>
+                <select id="color-palette">
+                    <option value="">--Please choose an option--</option>
+                    <!-- Add more options here -->
+                </select>
 
-        <label for="color-palette">Color Palette:</label>
-        <select id="color-palette">
-            <option value="">--Please choose an option--</option>
-            <!-- Add more options here -->
-        </select>
+                <!-- Add more select elements for other categories -->
+                <label for="furniture">Furniture:</label>
+                <select id="furniture">
+                    <option value="">--Please choose an option--</option>
+                    <!-- Add more options here -->
+                </select>
+            </form>
+        </section>
+        
+        <section class="buttons-section">
+            <div class="container">
+                <button class="button" onclick="generatePrompt()">Generate Prompt</button>
+                <button class="button" onclick="generateRandomPrompt()">Randomly generated</button>
+                <button class="button" id="copy-button">Copy to clipboard</button>
+            </div>
+        </section>
 
-        <!-- Add more select elements for other categories -->
-        <label for="furniture">Furniture:</label>
-        <select id="furniture">
-            <option value="">--Please choose an option--</option>
-            <!-- Add more options here -->
-        </select>
-
-        <label for="layout">Layout:</label>
-        <select id="layout">
-            <option value="">--Please choose an option--</option>
-            <!-- Add more options here -->
-        </select>
-
+        <p id="prompt"></p>
         <label for="lighting">Lighting:</label>
         <select id="lighting">
             <option value="">--Please choose an option--</option>
@@ -96,17 +109,10 @@
             <option value="">--Please choose an option--</option>
             <!-- Add more options here -->
         </select>
-
-        
-    </form>
-
-    <div class="container">
-        <button class="button" onclick="generatePrompt()">Generate Prompt</button>
-        <button class="button" onclick="generateRandomPrompt()">Randomly generated</button>
-        <button class="button" id="copy-button">Copy to clipboard</button>
-    </div>
-      
-<p id="prompt"></p>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2023 Interior Design Prompt Generator</p>
+    </footer>
 
 </body>
 </html>

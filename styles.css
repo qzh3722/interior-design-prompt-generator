@@ -1,38 +1,93 @@
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f8f9fa;
-    max-width: 600px;
-    margin: 0 auto;
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-select {
-    width: 200px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #343a40; /* Dark header background */
+    color: #fff; /* White header text */
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #6c757d;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    background-color: #212529;
+    padding: 0.5rem 0;
+}
+
+nav ul {
+    list-style: none;
     text-align: center;
 }
 
-form {
-    margin-top: 20px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
 }
 
-label, select, button {
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+main {
+    padding: 2rem;
+    flex-grow: 1; /* Allows main to fill available space */
+}
+
+form {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+label, select {
+    margin-bottom: 1rem;
     display: block;
-    margin-bottom: 20px;
 }
 
 button {
-    padding: 10px;
-    background-color: #6c757d;
-    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    background-color: #007bff; /* Primary blue button */
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #343a40;
+    color: #fff;
 }
