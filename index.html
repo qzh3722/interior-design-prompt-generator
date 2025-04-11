@@ -1,167 +1,258 @@
-<!DOCTYPE html>                                                                                                                                                  
+<!DOCTYPE html>
 <html>
 <head>
     <title>Interior Design Prompt Generator</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js" defer></script>
     <style>
-        body {
-          font-family: Arial, Helvetica, sans-serif;
-        }
-        .container {
-          display: flex;
-          flex-direction: column;
-        }
-        @media screen and (min-width: 600px) {
-          .container {
-            flex-direction: row;
-          }
-        }
-        .button {
-          margin: 5px;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    @media screen and (min-width: 600px) {
+      .container {
+        flex-direction: row;
+      }
+    }
+    .button {
+      margin: 5px;
+    }
     </style>
 </head>
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <h1>Interior Design Prompt Generator</h1>
-    </nav>
-  </header>
+    <h1>Welcome to the Interior Design Prompt Generator!</h1>
+    <p>Choose your preferences and generate a design prompt.</p>
 
-  <main class="main-content">
-    <section class="intro">
-      <p>Choose your preferences and generate a design prompt.</p>
-    </section>
-    <section class="form-section">
-      <form id="design-form" class="form-grid">
-        <div class="form-group">
-          <label for="perspective">Perspective:</label>
-          <select id="perspective">
+    <form id="design-form">
+        <label for="perspective">Perspective:</label>
+        <select id="perspective">
             <option value="">--Please choose an option--</option>
-            <option value="overhead">Overhead</option>
-            <option value="eye-level">Eye-level</option>
-            <option value="low-angle">Low-angle</option>
-            <!-- Add more options here -->
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="space-type">Space Type:</label>
-          <select id="space-type">
-            <option value="">--Please choose an option--</option>
-            <option value="living-room">Living Room</option>
-            <option value="bedroom">Bedroom</option>
-            <option value="kitchen">Kitchen</option>
-            <option value="bathroom">Bathroom</option>
-            <option value="dining-room">Dining Room</option>
-            <!-- Add more options here -->
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="style">Style:</label>
-          <select id="style">
-            <option value="modern">Modern</option>
-            <option value="minimalist">Minimalist</option>
-            <option value="industrial">Industrial</option>
-            <option value="scandinavian">Scandinavian</option>
-            <option value="mid-century">Mid-Century</option>
-            <option value="bohemian">Bohemian</option>
-            <option value="">--Please choose an option--</option>
-            <!-- Add more options here -->
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="color-palette">Color Palette:</label>
-                <select id="color-palette">
-                    <option value="monochromatic">Monochromatic</option>
-                    <option value="complementary">Complementary</option>
-                    <option value="analogous">Analogous</option>
-                    <option value="triadic">Triadic</option>
-                    <option value="warm">Warm</option>
-                    <option value="cool">Cool</option>
-                    <option value="">--Please choose an option--</option>
-                    <!-- Add more options here -->
-                </select>
-
-                <!-- Add more select elements for other categories -->
-                <label for="furniture">Furniture:</label>
-        <select id="furniture">
-          <option value="sofa">Sofa</option>
-          <option value="armchair">Armchair</option>
-          <option value="coffee-table">Coffee Table</option>
-          <option value="bed">Bed</option>
-          <option value="dining-table">Dining Table</option>
-          <option value="chairs">Chairs</option>
-          <option value="">--Please choose an option--</option>
-          <!-- Add more options here -->
+            <option value="Front View">Front View</option>
+            <option value="Isometric View">Isometric View</option>
+            <option value="Bird's Eye View">Bird's Eye View</option>
+            <option value="3/4 View">3/4 View</option>
+            <option value="Close-up">Close-up</option>
+            <option value="Wide Angle">Wide Angle</option>
         </select>
+
+        <label for="space-type">Space Type:</label>
+        <select id="space-type">
+            <option value="">--Please choose an option--</option>
+            <option value="Living Room">Living Room</option>
+            <option value="Bedroom">Bedroom</option>
+            <option value="Kitchen">Kitchen</option>
+            <option value="Bathroom">Bathroom</option>
+            <option value="Dining Room">Dining Room</option>
+            <option value="Home Office">Home Office</option>
+            <option value="Entryway">Entryway</option>
+            <option value="Nursery">Nursery</option>
+            <option value="Patio">Patio</option>
+            <option value="Balcony">Balcony</option>
+            <option value="Garden">Garden</option>
+            <option value="Studio">Studio</option>
+            <option value="Loft">Loft</option>
+            <option value="Basement">Basement</option>
+            <option value="Attic">Attic</option>
+            <option value="Garage">Garage</option>
+        </select>
+
+        <label for="style">Style:</label>
+        <select id="style">
+            <option value="">--Please choose an option--</option>
+            <option value="Modern">Modern</option>
+            <option value="Contemporary">Contemporary</option>
+            <option value="Minimalist">Minimalist</option>
+            <option value="Industrial">Industrial</option>
+            <option value="Scandinavian">Scandinavian</option>
+            <option value="Bohemian">Bohemian</option>
+            <option value="Traditional">Traditional</option>
+            <option value="Rustic">Rustic</option>
+            <option value="Mid-Century Modern">Mid-Century Modern</option>
+            <option value="Glam">Glam</option>
+            <option value="Art Deco">Art Deco</option>
+            <option value="Coastal">Coastal</option>
+            <option value="Mediterranean">Mediterranean</option>
+            <option value="Tropical">Tropical</option>
+            <option value="Eclectic">Eclectic</option>
+            <option value="Transitional">Transitional</option>
+            <option value="Shabby Chic">Shabby Chic</option>
+            <option value="Farmhouse">Farmhouse</option>
+            <option value="Asian">Asian</option>
+            <option value="Moroccan">Moroccan</option>
+            <option value="Hollywood Regency">Hollywood Regency</option>
+        </select>
+
+        <label for="color-palette">Color Palette:</label>
+        <select id="color-palette">
+            <option value="">--Please choose an option--</option>
+            <option value="Monochromatic">Monochromatic</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Warm">Warm</option>
+            <option value="Cool">Cool</option>
+            <option value="Earthy">Earthy</option>
+            <option value="Jewel Tones">Jewel Tones</option>
+            <option value="Pastel">Pastel</option>
+            <option value="Bold">Bold</option>
+            <option value="Vibrant">Vibrant</option>
+            <option value="Muted">Muted</option>
+        </select>
+
+        <!-- Add more select elements for other categories -->
+        <label for="furniture">Furniture:</label>
+        <select id="furniture">
+            <option value="">--Please choose an option--</option>
+            <option value="Modern Sofa">Modern Sofa</option>
+            <option value="Classic Armchair">Classic Armchair</option>
+            <option value="Minimalist Coffee Table">Minimalist Coffee Table</option>
+            <option value="Vintage Bookshelf">Vintage Bookshelf</option>
+            <option value="Elegant Dining Set">Elegant Dining Set</option>
+            <option value="Cozy Bed">Cozy Bed</option>
+            <option value="Functional Desk">Functional Desk</option>
+            <option value="Stylish Bar Stools">Stylish Bar Stools</option>
+            <option value="Outdoor Lounge Chairs">Outdoor Lounge Chairs</option>
+            <option value="Rattan Furniture">Rattan Furniture</option>
+        </select>
+
         <label for="layout">Layout:</label>
         <select id="layout">
-            <option value="open-plan">Open-plan</option>
-            <option value="closed-off">Closed-off</option>
-            <option value="zoning">Zoning</option>
-            <option value="focal-point">Focal-point</option>
-            <option value="centralized">Centralized</option>
-          <option value="">--Please choose an option--</option>
-          <!-- Add more options here -->
+            <option value="">--Please choose an option--</option>
+            <option value="Open Concept">Open Concept</option>
+            <option value="Symmetrical">Symmetrical</option>
+            <option value="Asymmetrical">Asymmetrical</option>
+            <option value="Minimalist">Minimalist</option>
+            <option value="Maximalist">Maximalist</option>
+            <option value="Cozy">Cozy</option>
+            <option value="Spacious">Spacious</option>
+            <option value="Functional">Functional</option>
+            <option value="Multi-functional">Multi-functional</option>
+            <option value="Zoned">Zoned</option>
         </select>
+
         <label for="lighting">Lighting:</label>
         <select id="lighting">
-            <option value="ambient">Ambient</option>
-            <option value="task">Task</option>
-            <option value="accent">Accent</option>
-            <option value="natural">Natural</option>
-            <option value="layered">Layered</option>
-          <option value="">--Please choose an option--</option>
-          <!-- Add more options here -->
+            <option value="">--Please choose an option--</option>
+            <option value="Natural Light">Natural Light</option>
+            <option value="Ambient Lighting">Ambient Lighting</option>
+            <option value="Task Lighting">Task Lighting</option>
+            <option value="Accent Lighting">Accent Lighting</option>
+            <option value="Statement Chandelier">Statement Chandelier</option>
+            <option value="Recessed Lighting">Recessed Lighting</option>
+            <option value="Track Lighting">Track Lighting</option>
+            <option value="Wall Sconces">Wall Sconces</option>
+            <option value="Floor Lamps">Floor Lamps</option>
+            <option value="Table Lamps">Table Lamps</option>
+            <option value="Fairy Lights">Fairy Lights</option>
         </select>
+
         <label for="materials">Materials:</label>
         <select id="materials">
-            <option value="wood">Wood</option>
-            <option value="metal">Metal</option>
-            <option value="glass">Glass</option>
-            <option value="stone">Stone</option>
-            <option value="concrete">Concrete</option>
-            <option value="textile">Textile</option>
-          <option value="">--Please choose an option--</option>
-          <!-- Add more options here -->
+            <option value="">--Please choose an option--</option>
+            <option value="Wood">Wood</option>
+            <option value="Metal">Metal</option>
+            <option value="Glass">Glass</option>
+            <option value="Concrete">Concrete</option>
+            <option value="Plastic">Plastic</option>
+            <option value="Natural Fibers">Natural Fibers</option>
+            <option value="Stone">Stone</option>
+            <option value="Brick">Brick</option>
+            <option value="Leather">Leather</option>
+            <option value="Fabric">Fabric</option>
+            <option value="Velvet">Velvet</option>
+            <option value="Linen">Linen</option>
+            <option value="Silk">Silk</option>
         </select>
+
         <label for="textures">Textures:</label>
         <select id="textures">
-            <option value="smooth">Smooth</option>
-            <option value="rough">Rough</option>
-          <option value="">--Please choose an option--</option>
-          <!-- Add more options here -->
+            <option value="">--Please choose an option--</option>
+            <option value="Smooth">Smooth</option>
+            <option value="Rough">Rough</option>
+            <option value="Soft">Soft</option>
+            <option value="Hard">Hard</option>
+            <option value="Shiny">Shiny</option>
+            <option value="Matte">Matte</option>
+            <option value="Glossy">Glossy</option>
+            <option value="Textured">Textured</option>
+            <option value="Patterned">Patterned</option>
+            <option value="Embossed">Embossed</option>
+            <option value="Woven">Woven</option>
+            <option value="Knitted">Knitted</option>
+            <option value="Braided">Braided</option>
+            <option value="Tufted">Tufted</option>
+            <option value="Pleated">Pleated</option>
+            <option value="Ruffled">Ruffled</option>
+            <option value="Distressed">Distressed</option>
+            <option value="Glazed">Glazed</option>
+            <option value="Polished">Polished</option>
+            <option value="Stained">Stained</option>
+            <option value="Painted">Painted</option>
+            <option value="Clear">Clear</option>
+            <option value="Colored">Colored</option>
+            <option value="Furry">Furry</option>
+            <option value="Scaly">Scaly</option>
         </select>
+
+        <label for="accessories">Accessories:</label>
+        <select id="accessories">
+            <option value="">--Please choose an option--</option>
+            <option value="Plants">Plants</option>
+            <option value="Artwork">Artwork</option>
+            <option value="Mirrors">Mirrors</option>
+            <option value="Rugs">Rugs</option>
+            <option value="Curtains">Curtains</option>
+            <option value="Cushions">Cushions</option>
+            <option value="Throws">Throws</option>
+            <option value="Candles">Candles</option>
+            <option value="Vases">Vases</option>
+            <option value="Books">Books</option>
+            <option value="Sculptures">Sculptures</option>
+            <option value="Clocks">Clocks</option>
+            <option value="Photographs">Photographs</option>
+            <option value="Collectibles">Collectibles</option>
+        </select>
+
         <label for="mood">Mood:</label>
         <select id="mood">
-          <option value="">--Please choose an option--</option>
-          <!-- Add more options here -->
-            <option value="cozy">Cozy</option>
-            <option value="minimalist">Minimalist</option>
-            <option value="inviting">Inviting</option>
-            <option value="vibrant">Vibrant</option>
-            <option value="relaxing">Relaxing</option>
-            <option value="sophisticated">Sophisticated</option>
+            <option value="">--Please choose an option--</option>
+            <option value="Calm">Calm</option>
+            <option value="Relaxing">Relaxing</option>
+            <option value="Peaceful">Peaceful</option>
+            <option value="Serene">Serene</option>
+            <option value="Cozy">Cozy</option>
+            <option value="Inviting">Inviting</option>
+            <option value="Warm">Warm</option>
+            <option value="Comfortable">Comfortable</option>
+            <option value="Elegant">Elegant</option>
+            <option value="Sophisticated">Sophisticated</option>
+            <option value="Chic">Chic</option>
+            <option value="Stylish">Stylish</option>
+            <option value="Modern">Modern</option>
+            <option value="Contemporary">Contemporary</option>
+            <option value="Minimalist">Minimalist</option>
+            <option value="Industrial">Industrial</option>
+            <option value="Bohemian">Bohemian</option>
+            <option value="Rustic">Rustic</option>
+            <option value="Glamorous">Glamorous</option>
+            <option value="Luxurious">Luxurious</option>
+            <option value="Vibrant">Vibrant</option>
+            <option value="Energetic">Energetic</option>
+            <option value="Playful">Playful</option>
+            <option value="Creative">Creative</option>
         </select>
-      </form>
-    </section>
 
-    <section class="buttons-section">
-      <div class="container">
+        
+    </form>
+
+    <div class="container">
         <button class="button" onclick="generatePrompt()">Generate Prompt</button>
         <button class="button" onclick="generateRandomPrompt()">Randomly generated</button>
         <button class="button" id="copy-button">Copy to clipboard</button>
-      </div>
-    </section>
-
-    <p id="prompt"></p>
-  </main>
-  <footer class="footer">
-    <p>&copy; 2023 Interior Design Prompt Generator</p>
-  </footer>
+    </div>
+      
+<p id="prompt"></p>
 
 </body>
 </html>
